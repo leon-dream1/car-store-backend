@@ -44,14 +44,13 @@ const updateACarDataInDB = async (
   return { updatedResult, updatedCarInfo };
 };
 
-
 // Get a single car data
 const deleteACarFromDB = async (id: string) => {
   const result = await carModel.deleteOne({ _id: id });
 
   // get the Deleted car Info
   const deletedCarInfo = await carModel.findOne({ _id: id });
-  return {result, deletedCarInfo};
+  return { result, deletedCarInfo };
 };
 
 export const carServices = {
@@ -59,5 +58,5 @@ export const carServices = {
   getAllCarFromDB,
   getASingleCarFromDB,
   updateACarDataInDB,
-  deleteACarFromDB
+  deleteACarFromDB,
 };

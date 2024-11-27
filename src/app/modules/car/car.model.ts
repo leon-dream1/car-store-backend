@@ -23,7 +23,7 @@ export const carSchema = new Schema<TCar>(
     quantity: {
       type: Number,
       required: true,
-      min: 0
+      min: 0,
     },
     inStock: {
       type: Boolean,
